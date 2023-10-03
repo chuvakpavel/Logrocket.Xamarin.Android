@@ -1,0 +1,32 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.protobuf')]" />
+
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.core.network')]/class[@name='NullRequestBuilder']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.core.filter')]/class[@name='Trigger']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.core.filter')]/class[@name='ErrorStateRule']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.core.filter')]/class[@name='Rule']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.logrocket.core.filter')]/class[@name='SelectorUtils']" />
+
+	<!--Rename-->
+	<attr path="/api/package[@name='lr.android.canvas']/
+				  class[@name='Canvas.DefaultTypeface']/
+				  field[@name='DEFAULT_TYPEFACE']"
+    name="managedName">GetDefaultTypeface</attr>
+
+
+	<!-- Change the visibility of a method -->
+	<attr path="/api/package[@name='com.logrocket.core.persistence']/
+				  class[@name='MergedEventBatch']/
+				  method[@name='transferTo' and
+						count(parameter)=1 and
+						parameter[1][@type='java.nio.channels.WritableByteChannel']]"
+		  name="visibility">protected</attr>
+</metadata>
