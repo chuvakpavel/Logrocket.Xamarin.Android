@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Logrocket.TestPkg</string>
+    <string name="action_settings">Settings</string>
+</resources>
